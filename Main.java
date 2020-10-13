@@ -1,3 +1,7 @@
 public class Main {
-	// Ignora esto Leandro, es una prueba.asdasasdsd
+	public static void main(String[] args) {
+		Cuenta cuenta = new Cuenta();
+		cuenta.registro();
+		
+	}
 }

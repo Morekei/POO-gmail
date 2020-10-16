@@ -1,19 +1,22 @@
-import javax.swing.JOptionPane;
 
-public class Cuenta {
-	String email;
-	String contrasena;
-	int hola;
-	
-	public void registro(){
-	    JOptionPane.showMessageDialog(null, "Ahora se registrara en Gmail.");
-		email=JOptionPane.showInputDialog("Ingrese su email.");
-		contrasena=JOptionPane.showInputDialog("Ingrese su contraseña.");
-		Cuenta cuenta = new Cuenta();
-		
-	}
-	
-	public void eleccion() {
-		
-	}
+
+ public class Cuenta {
+	private String email;
+	private String contrasena;
+
+   public Cuenta(String email, String contrasena) {
+	   this.email = email;
+	   this.contrasena = email;
+   }
+
+   public String getEmail() {
+	   return this.email;
+   }
+   
+   public String getContrasena() {
+	   return this.contrasena;
+   }
+   
+   
+
 }

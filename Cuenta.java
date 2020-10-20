@@ -1,6 +1,5 @@
 
-
- public class Cuenta {
+public class Cuenta {
 	private String email;
 	private String contrasena;
 
@@ -17,6 +16,10 @@
 	   return this.contrasena;
    }
    
+   public boolean isValid(String email, String contrasena) {
+
+	   return email.equals(this.email) && contrasena.equals(this.contrasena);
    
+   }
 
 }

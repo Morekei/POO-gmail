@@ -1,3 +1,4 @@
+package gmail;
 
 public class Cuenta {
 	private String email;

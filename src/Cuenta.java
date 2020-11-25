@@ -12,22 +12,32 @@ public class Cuenta {
 	private Bandeja recibido;
 	private Bandeja destacado;
 	private Bandeja papelera;
-	
+	private Hangouts mensaje;
+
 	
 	
 	//Constructor de cuentas con sus respectivas bandejas
 	public Cuenta(Bandeja enviado, 
 			      Bandeja recibido, 
 			      Bandeja papelera, 
-			      Bandeja destacado) {
+			      Bandeja destacado,
+			      Hangouts mensaje) {
 		
 		this.enviado = enviado;
 		this.recibido = recibido;
 		this.papelera = papelera;
 		this.destacado = destacado;
+		this.mensaje = mensaje;
 	}
 	
 	//Getters y setters
+	public Hangouts getMensaje() {
+		return mensaje;
+	}
+	public void setMensaje(Hangouts mensaje) {
+		this.mensaje = mensaje;
+	}
+	
 	public String getEmail() {
 		return email;
 	}
@@ -82,6 +92,27 @@ public class Cuenta {
 		
 		System.out.println("Cuenta creada con éxito! Su dmail nuevo es: "+email);
 	}
+	//intento de metodo de hangouts
+	public void enviarHangouts(Cuenta cuenta) {
+		String mensaje;
+		
+		System.out.println("Enviar un hangouts a : "+cuenta.getEmail());
+		System.out.println("Mensaje :");
+		mensaje = sc.nextLine();
+		System.out.println("Presione Enter para enviar.");
+		sc.nextLine();
+		
+		Mensajehangouts mensajeob = new Mensajehangouts(mensaje, cuenta.getEmail());
+		
+		mensajeob.setMensaje(mensaje);
+		
+		this.mensaje.mensajeingre.add(mensajeob);
+		cuenta.getMensaje().mensajeingre.add(mensajeob);
+		
+		System.out.println(email + " ha enviado un mensaje a " + cuenta.getEmail());
+	}
+	
+	
 	
 	//Metodo de enviar mail de cuenta a cuenta creando en el un correo.
 	public void enviarMail(Cuenta cuenta) {

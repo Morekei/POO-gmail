@@ -16,7 +16,6 @@ public class Correo {
 	}
 	
 	//Getters y setters
-	
 	public String getEmisor() {
 		return emisor;
 	}
